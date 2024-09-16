@@ -1,8 +1,10 @@
 ![output](https://github.com/user-attachments/assets/5baee52c-e8f0-4291-ac0d-0f98e7070d46)
 
-### About me:
+### 🌿 About me:
 
-- Go Developer
+- ⏳ Go Developer
+- 🗿 Think Tanker, Gen 5
+
 
 
 ### Tech Stack:
