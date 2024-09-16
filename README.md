@@ -2,8 +2,8 @@
 
 ### 🌿 About me:
 
-- ⏳ Go Developer
-- 🗿 Think Tanker, Gen 5
+- ⏳ Go developer
+- 🗿 Think tanker, Gen 5
 
 
 
