@@ -27,3 +27,36 @@
 
 [![Telegram Badge](https://img.shields.io/badge/-Telegram-0088cc?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/uuidf)
 
+
+## 📌 Pinned Projects
+
+<div align="center">
+    <a href="https://github.com/wrongjunior/practical-networking">
+        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=practical-networking&border_color=EE4779&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=00BAE9" />
+    </a>
+    <span>&nbsp;</span>
+    <a href="https://github.com/wrongjunior/gh-checker">
+        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=gh-checker&border_color=00BAE9&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=EE4779" />
+    </a>
+</div>
+<p> </p>
+<div align="center">
+    <a href="https://github.com/wrongjunior/LitTime">
+        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=LitTime&border_color=00BAE9&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=EE4779" />
+    </a>
+    <span>&nbsp;</span>
+    <a href="https://github.com/wrongjunior/dirTree">
+        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=dirTree&border_color=EE4779&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=00BAE9" />
+    </a>
+</div>
+<p> </p>
+<div align="center">
+    <a href="https://github.com/wrongjunior/ltm-api">
+        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=ltm-api&border_color=EE4779&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=00BAE9" />
+    </a>
+    <span>&nbsp;</span>
+    <a href="https://github.com/wrongjunior/ltm-front">
+        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=ltm-front&border_color=00BAE9&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=EE4779" />
+    </a>
+</div>
+
