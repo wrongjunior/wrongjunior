@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="170" viewBox="0 0 520 170">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="152" viewBox="0 0 520 152">
   <defs>
     <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
@@ -8,11 +8,11 @@
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.18"/>
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
     </linearGradient>
-    <radialGradient id="blobA" cx="20%" cy="25%" r="85%">
+    <radialGradient id="blobA" cx="18%" cy="25%" r="90%">
       <stop offset="0" stop-color="#7CF7FF" stop-opacity="0.22"/>
       <stop offset="1" stop-color="#7CF7FF" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="blobB" cx="88%" cy="78%" r="90%">
+    <radialGradient id="blobB" cx="88%" cy="78%" r="95%">
       <stop offset="0" stop-color="#9B7CFF" stop-opacity="0.20"/>
       <stop offset="1" stop-color="#9B7CFF" stop-opacity="0"/>
     </radialGradient>
@@ -21,44 +21,44 @@
       <stop offset="1" stop-color="#9B7CFF"/>
     </linearGradient>
     <clipPath id="clip">
-      <rect x="0" y="0" width="520" height="170" rx="26"/>
+      <rect width="520" height="152" rx="24"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#clip)">
-    <rect width="520" height="170" rx="26" fill="url(#base)"/>
-    <rect width="520" height="170" rx="26" fill="url(#blobA)"/>
-    <rect width="520" height="170" rx="26" fill="url(#blobB)"/>
-    <path d="M18 34H502" stroke="#FFFFFF" stroke-opacity="0.08"/>
-    <path d="M18 140H502" stroke="#000000" stroke-opacity="0.24"/>
+    <rect width="520" height="152" rx="24" fill="url(#base)"/>
+    <rect width="520" height="152" rx="24" fill="url(#blobA)"/>
+    <rect width="520" height="152" rx="24" fill="url(#blobB)"/>
+    <path d="M16 30H504" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <path d="M16 124H504" stroke="#000000" stroke-opacity="0.22"/>
   </g>
-  <rect x="0.5" y="0.5" width="519" height="169" rx="26" fill="none" stroke="url(#stroke)"/>
+  <rect x="0.5" y="0.5" width="519" height="151" rx="24" fill="none" stroke="url(#stroke)"/>
 
   <!-- icon -->
-  <rect x="22" y="22" width="38" height="38" rx="14" fill="url(#accent)" opacity="0.92"/>
-  <circle cx="36" cy="36" r="5" fill="#FFFFFF" opacity="0.14"/>
+  <rect x="18" y="18" width="36" height="36" rx="14" fill="url(#accent)" opacity="0.92"/>
+  <circle cx="30" cy="30" r="5" fill="#FFFFFF" opacity="0.14"/>
 
-  <!-- text -->
-  <text x="74" y="46" font-size="22" font-weight="900" fill="#EAF2FF"
+  <!-- title -->
+  <text x="66" y="42" font-size="24" font-weight="900" fill="#EAF2FF"
         font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
     practical-networking
   </text>
-  <text x="74" y="70" font-size="13" fill="#C9D1D9" opacity="0.85"
+  <text x="66" y="62" font-size="12" fill="#C9D1D9" opacity="0.82"
         font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
-    wrongjunior / repo
+    wrongjunior · repository
   </text>
 
   <!-- chips -->
   <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial"
-     font-size="12" font-weight="700" fill="#EAF2FF" opacity="0.92">
-    <rect x="22" y="112" width="74" height="26" rx="10" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.10"/>
-    <text x="40" y="130">Notes</text>
+     font-size="11" font-weight="800" fill="#EAF2FF" opacity="0.92">
+    <rect x="18" y="98" width="78" height="24" rx="10" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="40" y="114">Notes</text>
 
-    <rect x="104" y="112" width="92" height="26" rx="10" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.10"/>
-    <text x="124" y="130">Practice</text>
+    <rect x="104" y="98" width="92" height="24" rx="10" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="126" y="114">Practice</text>
   </g>
 
-  <!-- corner mark -->
-  <text x="486" y="42" font-size="18" font-weight="900" fill="#EAF2FF" opacity="0.75"
+  <!-- arrow -->
+  <text x="494" y="44" font-size="18" font-weight="900" fill="#EAF2FF" opacity="0.70"
         font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">↗</text>
 </svg>
