@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="210" viewBox="0 0 900 210">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.08"/>
+    </linearGradient>
+    <radialGradient id="blobA" cx="22%" cy="25%" r="90%">
+      <stop offset="0" stop-color="#36D5FF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#36D5FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="88%" cy="80%" r="95%">
+      <stop offset="0" stop-color="#7B61FF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#7B61FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <clipPath id="clip">
+      <rect width="900" height="210" rx="26"/>
+    </clipPath>
+
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <linearGradient id="chipStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.07"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="900" height="210" rx="26" fill="url(#base)"/>
+    <rect width="900" height="210" rx="26" fill="url(#blobA)"/>
+    <rect width="900" height="210" rx="26" fill="url(#blobB)"/>
+    <path d="M20 42H880" stroke="#FFFFFF" stroke-opacity="0.45"/>
+    <path d="M20 176H880" stroke="#0B1220" stroke-opacity="0.10"/>
+  </g>
+  <rect x="0.5" y="0.5" width="899" height="209" rx="26" fill="none" stroke="url(#stroke)"/>
+
+  <!-- Section labels -->
+  <text x="30" y="38" font-size="12" font-weight="900" letter-spacing="0.16em"
+        fill="#0B1220" opacity="0.55"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+    CORE
+  </text>
+
+  <text x="30" y="124" font-size="12" font-weight="900" letter-spacing="0.16em"
+        fill="#0B1220" opacity="0.55"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+    ALSO KNOW
+  </text>
+
+  <!-- Chips: Core -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial"
+     font-size="14" font-weight="900" fill="#0B1220">
+    <rect x="30" y="56" width="96" height="34" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="58" y="78">Go</text>
+
+    <rect x="136" y="56" width="112" height="34" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="164" y="78">Docker</text>
+
+    <rect x="258" y="56" width="106" height="34" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="286" y="78">Linux</text>
+
+    <rect x="374" y="56" width="148" height="34" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="402" y="78">PostgreSQL</text>
+  </g>
+
+  <!-- Chips: Also know -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial"
+     font-size="13" font-weight="900" fill="#0B1220" opacity="0.92">
+    <rect x="30" y="142" width="132" height="32" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="58" y="163">Prometheus</text>
+
+    <rect x="172" y="142" width="122" height="32" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="200" y="163">ClickHouse</text>
+
+    <rect x="304" y="142" width="92" height="32" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="332" y="163">SQLite</text>
+
+    <rect x="406" y="142" width="52" height="32" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="426" y="163">C</text>
+
+    <rect x="468" y="142" width="64" height="32" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="488" y="163">C++</text>
+
+    <rect x="542" y="142" width="76" height="32" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="566" y="163">Java</text>
+
+    <rect x="628" y="142" width="90" height="32" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="652" y="163">Python</text>
+
+    <rect x="728" y="142" width="62" height="32" rx="12" fill="url(#chip)" stroke="url(#chipStroke)"/>
+    <text x="748" y="163">MPI</text>
+  </g>
+</svg>
