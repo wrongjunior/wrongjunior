@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="170" viewBox="0 0 520 170">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    </linearGradient>
+    <radialGradient id="blobA" cx="18%" cy="25%" r="85%">
+      <stop offset="0" stop-color="#7CF7FF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7CF7FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="88%" cy="78%" r="90%">
+      <stop offset="0" stop-color="#9B7CFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#9B7CFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7CF7FF"/>
+      <stop offset="1" stop-color="#9B7CFF"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <rect width="520" height="170" rx="26"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="520" height="170" rx="26" fill="url(#base)"/>
+    <rect width="520" height="170" rx="26" fill="url(#blobA)"/>
+    <rect width="520" height="170" rx="26" fill="url(#blobB)"/>
+    <path d="M18 34H502" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <path d="M18 140H502" stroke="#000000" stroke-opacity="0.24"/>
+  </g>
+  <rect x="0.5" y="0.5" width="519" height="169" rx="26" fill="none" stroke="url(#stroke)"/>
+
+  <rect x="22" y="22" width="38" height="38" rx="14" fill="url(#accent)" opacity="0.92"/>
+  <path d="M41 31v10l7 4" fill="none" stroke="#0B0F16" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="74" y="46" font-size="22" font-weight="900" fill="#EAF2FF"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+    LitTime
+  </text>
+  <text x="74" y="70" font-size="13" fill="#C9D1D9" opacity="0.85"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+    wrongjunior / repo
+  </text>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial"
+     font-size="12" font-weight="700" fill="#EAF2FF" opacity="0.92">
+    <rect x="22" y="112" width="60" height="26" rx="10" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="40" y="130">App</text>
+
+    <rect x="90" y="112" width="86" height="26" rx="10" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="110" y="130">Project</text>
+  </g>
+
+  <text x="486" y="42" font-size="18" font-weight="900" fill="#EAF2FF" opacity="0.75"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">↗</text>
+</svg>
