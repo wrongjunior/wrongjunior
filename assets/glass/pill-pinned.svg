@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="110" viewBox="0 0 700 110">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    </linearGradient>
+
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.10"/>
+    </linearGradient>
+
+    <radialGradient id="blobA" cx="20%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#9B7CFF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#9B7CFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="blobB" cx="86%" cy="75%" r="80%">
+      <stop offset="0" stop-color="#7CF7FF" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#7CF7FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="icon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9B7CFF"/>
+      <stop offset="1" stop-color="#7CF7FF"/>
+    </linearGradient>
+
+    <clipPath id="clip">
+      <rect x="0" y="0" width="700" height="110" rx="44"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect x="0" y="0" width="700" height="110" rx="44" fill="url(#glass)"/>
+    <rect x="0" y="0" width="700" height="110" rx="44" fill="url(#blobA)"/>
+    <rect x="0" y="0" width="700" height="110" rx="44" fill="url(#blobB)"/>
+    <path d="M40 26H660" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1"/>
+    <path d="M40 92H660" stroke="#000000" stroke-opacity="0.28" stroke-width="1"/>
+  </g>
+
+  <rect x="0.5" y="0.5" width="699" height="109" rx="44" fill="none" stroke="url(#stroke)"/>
+
+  <path d="M62 44h32a10 10 0 0 1 10 10v2a10 10 0 0 1-10 10H62a10 10 0 0 1-10-10v-2a10 10 0 0 1 10-10z" fill="url(#icon)" opacity="0.95"/>
+  <text x="118" y="66"
+        font-size="44"
+        font-weight="900"
+        fill="#EAF2FF"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+    Pinned
+  </text>
+</svg>
