@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="152" viewBox="0 0 520 152">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.08"/>
+    </linearGradient>
+    <radialGradient id="blobA" cx="18%" cy="30%" r="90%">
+      <stop offset="0" stop-color="#7CF7FF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#7CF7FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="88%" cy="78%" r="95%">
+      <stop offset="0" stop-color="#7B61FF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#7B61FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7CF7FF"/>
+      <stop offset="1" stop-color="#7B61FF"/>
+    </linearGradient>
+    <clipPath id="clip">
+      <rect width="520" height="152" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="520" height="152" rx="24" fill="url(#base)"/>
+    <rect width="520" height="152" rx="24" fill="url(#blobA)"/>
+    <rect width="520" height="152" rx="24" fill="url(#blobB)"/>
+    <path d="M16 30H504" stroke="#FFFFFF" stroke-opacity="0.45"/>
+    <path d="M16 124H504" stroke="#0B1220" stroke-opacity="0.10"/>
+  </g>
+  <rect x="0.5" y="0.5" width="519" height="151" rx="24" fill="none" stroke="url(#stroke)"/>
+
+  <rect x="18" y="18" width="36" height="36" rx="14" fill="url(#accent)" opacity="0.92"/>
+  <path d="M26 38h20" stroke="#0B0F16" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round"/>
+
+  <text x="66" y="42" font-size="24" font-weight="900" fill="#0B1220"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+    ltm-api
+  </text>
+  <text x="66" y="62" font-size="12" fill="#0B1220" opacity="0.62"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+    wrongjunior · repository
+  </text>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial"
+     font-size="11" font-weight="800" fill="#0B1220" opacity="0.92">
+    <rect x="18" y="98" width="54" height="24" rx="10" fill="#0B1220" fill-opacity="0.04" stroke="#0B1220" stroke-opacity="0.10"/>
+    <text x="34" y="114">API</text>
+
+    <rect x="80" y="98" width="78" height="24" rx="10" fill="#0B1220" fill-opacity="0.04" stroke="#0B1220" stroke-opacity="0.10"/>
+    <text x="100" y="114">Service</text>
+  </g>
+
+  <text x="494" y="44" font-size="18" font-weight="900" fill="#0B1220" opacity="0.55"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">↗</text>
+</svg>
