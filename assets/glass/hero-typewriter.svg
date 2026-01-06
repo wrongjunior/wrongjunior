@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <defs>
+    <!-- glass base -->
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- blobs -->
+    <radialGradient id="blobA" cx="18%" cy="28%" r="95%">
+      <stop offset="0" stop-color="#7CF7FF" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#7CF7FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="86%" cy="78%" r="95%">
+      <stop offset="0" stop-color="#9B7CFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#9B7CFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- inner "terminal" -->
+    <linearGradient id="terminal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0F16" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#0B0F16" stop-opacity="0.42"/>
+    </linearGradient>
+    <linearGradient id="terminalStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    </linearGradient>
+
+    <clipPath id="clipOuter">
+      <rect x="0" y="0" width="900" height="260" rx="30"/>
+    </clipPath>
+
+    <!-- Step model:
+         char step = 32px
+         Think. => 6 chars  => max width 192
+         Code.  => 5 chars  => max width 160
+         Push.  => 5 chars  => max width 160
+         Stick to your plan. => 19 chars => max width 608
+    -->
+
+    <!-- mask for typewriter reveal (discrete steps; single timeline) -->
+    <mask id="revealMask">
+      <rect x="118" y="92" width="0" height="78" fill="#fff">
+        <animate attributeName="width"
+                 dur="20s" repeatCount="indefinite"
+                 calcMode="discrete"
+                 values="0;32;64;96;128;160;192;192;192;160;128;96;64;32;0;0;0;  0;32;64;96;128;160;160;160;128;96;64;32;0;0;0;  0;32;64;96;128;160;160;160;128;96;64;32;0;0;0;  0;32;64;96;128;160;192;224;256;288;320;352;384;416;448;480;512;544;576;608;608;608;608;608;608;608;608;  576;544;512;480;448;416;384;352;320;288;256;224;192;160;128;96;64;32;0;0;0;0;0"/>
+      </rect>
+    </mask>
+
+    <!-- subtle shadow -->
+    <filter id="shadow" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- caret glow -->
+    <filter id="caretGlow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.55 0" result="g"/>
+      <feMerge>
+        <feMergeNode in="g"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g clip-path="url(#clipOuter)" filter="url(#shadow)">
+    <!-- glass panel -->
+    <rect width="900" height="260" rx="30" fill="url(#base)"/>
+    <rect width="900" height="260" rx="30" fill="url(#blobA)"/>
+    <rect width="900" height="260" rx="30" fill="url(#blobB)"/>
+
+    <!-- inner terminal window -->
+    <rect x="40" y="58" width="820" height="150" rx="24"
+          fill="url(#terminal)" stroke="url(#terminalStroke)"/>
+
+    <!-- separators inside -->
+    <path d="M60 86H840" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <path d="M60 190H840" stroke="#000000" stroke-opacity="0.26"/>
+
+    <!-- prompt -->
+    <text x="78" y="150"
+          font-size="58" font-weight="800"
+          fill="#7CF7FF" opacity="0.88"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">❯</text>
+
+    <!-- typed text group (masked) -->
+    <g mask="url(#revealMask)"
+       font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+       font-size="58" font-weight="700" fill="#EAF2FF">
+
+      <!-- Think: visible from 0 .. 17/97 ; then off (gap until 18/97) -->
+      <text x="118" y="150" opacity="0">
+        Think.
+        <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+                 calcMode="discrete"
+                 values="1;0;0"
+                 keyTimes="0;0.175258;1"/>
+      </text>
+
+      <!-- Code: starts at 18/97; ends at 32/97; hard gap prevents flashing -->
+      <text x="118" y="150" opacity="0">
+        Code.
+        <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+                 calcMode="discrete"
+                 values="0;1;0;0"
+                 keyTimes="0;0.185567;0.329897;1"/>
+      </text>
+
+      <!-- Push: starts at 33/97; ends at 47/97 -->
+      <text x="118" y="150" opacity="0">
+        Push.
+        <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+                 calcMode="discrete"
+                 values="0;1;0;0"
+                 keyTimes="0;0.340206;0.484536;1"/>
+      </text>
+
+      <!-- Stick: starts at 48/97; stays to end -->
+      <text x="118" y="150" opacity="0">
+        Stick to your plan.
+        <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+                 calcMode="discrete"
+                 values="0;1;1"
+                 keyTimes="0;0.494845;1"/>
+      </text>
+    </g>
+
+    <!-- caret: same timeline as mask width; x = 118 + width; max = 726 (never out of bounds) -->
+    <!-- glow layer -->
+    <rect x="118" y="96" width="10" height="66" rx="4" fill="#EAF2FF" opacity="0.32" filter="url(#caretGlow)">
+      <animate attributeName="x"
+               dur="20s" repeatCount="indefinite"
+               calcMode="discrete"
+               values="118;150;182;214;246;278;310;310;310;278;246;214;182;150;118;118;118;  118;150;182;214;246;278;278;278;246;214;182;150;118;118;118;  118;150;182;214;246;278;278;278;246;214;182;150;118;118;118;  118;150;182;214;246;278;310;342;374;406;438;470;502;534;566;598;630;662;694;726;726;726;726;726;726;726;726;  694;662;630;598;566;534;502;470;438;406;374;342;310;278;246;214;182;150;118;118;118;118;118"/>
+      <animate attributeName="opacity"
+               dur="0.9s" repeatCount="indefinite"
+               values="0.0;0.32;0.32;0.0"
+               keyTimes="0;0.15;0.65;1"/>
+    </rect>
+
+    <!-- solid caret -->
+    <rect x="118" y="96" width="10" height="66" rx="4" fill="#EAF2FF" opacity="0.9">
+      <animate attributeName="x"
+               dur="20s" repeatCount="indefinite"
+               calcMode="discrete"
+               values="118;150;182;214;246;278;310;310;310;278;246;214;182;150;118;118;118;  118;150;182;214;246;278;278;278;246;214;182;150;118;118;118;  118;150;182;214;246;278;278;278;246;214;182;150;118;118;118;  118;150;182;214;246;278;310;342;374;406;438;470;502;534;566;598;630;662;694;726;726;726;726;726;726;726;726;  694;662;630;598;566;534;502;470;438;406;374;342;310;278;246;214;182;150;118;118;118;118;118"/>
+      <animate attributeName="opacity"
+               dur="0.9s" repeatCount="indefinite"
+               values="0.0;0.9;0.9;0.0"
+               keyTimes="0;0.15;0.65;1"/>
+    </rect>
+  </g>
+
+  <!-- outer stroke -->
+  <rect x="0.5" y="0.5" width="899" height="259" rx="30" fill="none" stroke="url(#stroke)"/>
+</svg>
