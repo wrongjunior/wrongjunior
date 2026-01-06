@@ -1,0 +1,270 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <defs>
+    <!-- glass base (light) -->
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- blobs -->
+    <radialGradient id="blobA" cx="18%" cy="28%" r="95%">
+      <stop offset="0" stop-color="#7CF7FF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7CF7FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="86%" cy="78%" r="95%">
+      <stop offset="0" stop-color="#9B7CFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#9B7CFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- inner "terminal" (light) -->
+    <linearGradient id="terminal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#EAF2FF" stop-opacity="0.78"/>
+    </linearGradient>
+    <linearGradient id="terminalStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.06"/>
+    </linearGradient>
+
+    <clipPath id="clipOuter">
+      <rect x="0" y="0" width="900" height="260" rx="30"/>
+    </clipPath>
+
+    <!-- reveal mask -->
+    <mask id="revealMask" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="900" height="260" fill="#000"/>
+      <rect id="revealRect" x="118" y="90" width="0" height="92" fill="#fff"/>
+    </mask>
+
+    <!-- subtle shadow (lighter) -->
+    <filter id="shadow" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+
+    <style><![CDATA[
+      svg{
+        --dur: 14s;
+        --pad: 0ch; /* КЛЮЧ: убираем опережение маски, чтобы курсор не “отставал” */
+
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 58px;
+        font-weight: 700; /* чтобы 1ch был стабилен */
+      }
+
+      /* Делаем ширину маски строго дискретной: никаких промежуточных “подрезанных” кадров */
+      #revealRect{
+        will-change: width;
+        animation: revealW var(--dur) infinite steps(1,end);
+      }
+
+      /* Окна видимости фраз тоже строго дискретные (без микрофейдов/наложений) */
+      .think{ animation: showThink var(--dur) infinite steps(1,end); }
+      .code{  animation: showCode  var(--dur) infinite steps(1,end); }
+      .push{  animation: showPush  var(--dur) infinite steps(1,end); }
+      .stick{ animation: showStick var(--dur) infinite steps(1,end); }
+
+      @keyframes showThink { 0%,19.999% {opacity:1;} 20%,100% {opacity:0;} }
+      @keyframes showCode  { 0%,19.999% {opacity:0;} 20%,38.999% {opacity:1;} 39%,100% {opacity:0;} }
+      @keyframes showPush  { 0%,38.999% {opacity:0;} 39%,57.999% {opacity:1;} 58%,100% {opacity:0;} }
+      @keyframes showStick { 0%,57.999% {opacity:0;} 58%,100% {opacity:1;} }
+
+      /* caret: тоже дискретно двигается по тем же ключам, без промежуточных “сдвигов” */
+      #caret{
+        will-change: transform, opacity;
+        shape-rendering: crispEdges;
+        animation:
+          caretX var(--dur) infinite steps(1,end),
+          caretBlink 0.86s infinite steps(1,end);
+      }
+      @keyframes caretBlink { 0%,49% {opacity:0.84;} 49.001%,100% {opacity:0;} }
+
+      /* --- твои keyframes ниже без изменения (pad остаётся, но pad=0ch) --- */
+
+      @keyframes revealW {
+        0%    { width:0ch; }
+        0.79% { width:0ch; } 0.8%  { width:calc(1ch  + var(--pad)); }
+        1.95% { width:calc(1ch  + var(--pad)); } 1.96% { width:calc(2ch  + var(--pad)); }
+        3.35% { width:calc(2ch  + var(--pad)); } 3.36% { width:calc(3ch  + var(--pad)); }
+        4.75% { width:calc(3ch  + var(--pad)); } 4.76% { width:calc(4ch  + var(--pad)); }
+        6.25% { width:calc(4ch  + var(--pad)); } 6.26% { width:calc(5ch  + var(--pad)); }
+        7.45% { width:calc(5ch  + var(--pad)); } 7.46% { width:calc(6ch  + var(--pad)); }
+        13.6% { width:calc(6ch  + var(--pad)); }
+
+        13.75% { width:calc(6ch + var(--pad)); } 13.76% { width:calc(5ch + var(--pad)); }
+        13.9%  { width:calc(5ch + var(--pad)); } 13.91% { width:calc(4ch + var(--pad)); }
+        14.05% { width:calc(4ch + var(--pad)); } 14.06% { width:calc(3ch + var(--pad)); }
+        14.2%  { width:calc(3ch + var(--pad)); } 14.21% { width:calc(2ch + var(--pad)); }
+        14.3%  { width:calc(2ch + var(--pad)); } 14.31% { width:calc(1ch + var(--pad)); }
+        14.38% { width:calc(1ch + var(--pad)); } 14.39% { width:0ch; }
+        20%    { width:0ch; }
+
+        20.6%  { width:0ch; } 20.61% { width:calc(1ch + var(--pad)); }
+        22.0%  { width:calc(1ch + var(--pad)); } 22.01% { width:calc(2ch + var(--pad)); }
+        23.3%  { width:calc(2ch + var(--pad)); } 23.31% { width:calc(3ch + var(--pad)); }
+        24.8%  { width:calc(3ch + var(--pad)); } 24.81% { width:calc(4ch + var(--pad)); }
+        26.4%  { width:calc(4ch + var(--pad)); } 26.41% { width:calc(5ch + var(--pad)); }
+        32.6%  { width:calc(5ch + var(--pad)); }
+
+        32.75% { width:calc(5ch + var(--pad)); } 32.76% { width:calc(4ch + var(--pad)); }
+        32.9%  { width:calc(4ch + var(--pad)); } 32.91% { width:calc(3ch + var(--pad)); }
+        33.05% { width:calc(3ch + var(--pad)); } 33.06% { width:calc(2ch + var(--pad)); }
+        33.2%  { width:calc(2ch + var(--pad)); } 33.21% { width:calc(1ch + var(--pad)); }
+        33.32% { width:calc(1ch + var(--pad)); } 33.33% { width:0ch; }
+        39%    { width:0ch; }
+
+        39.7%  { width:0ch; } 39.71% { width:calc(1ch + var(--pad)); }
+        41.1%  { width:calc(1ch + var(--pad)); } 41.11% { width:calc(2ch + var(--pad)); }
+        42.4%  { width:calc(2ch + var(--pad)); } 42.41% { width:calc(3ch + var(--pad)); }
+        43.9%  { width:calc(3ch + var(--pad)); } 43.91% { width:calc(4ch + var(--pad)); }
+        45.5%  { width:calc(4ch + var(--pad)); } 45.51% { width:calc(5ch + var(--pad)); }
+        51.6%  { width:calc(5ch + var(--pad)); }
+
+        51.74% { width:calc(5ch + var(--pad)); } 51.75% { width:calc(4ch + var(--pad)); }
+        51.88% { width:calc(4ch + var(--pad)); } 51.89% { width:calc(3ch + var(--pad)); }
+        52.02% { width:calc(3ch + var(--pad)); } 52.03% { width:calc(2ch + var(--pad)); }
+        52.16% { width:calc(2ch + var(--pad)); } 52.17% { width:calc(1ch + var(--pad)); }
+        52.28% { width:calc(1ch + var(--pad)); } 52.29% { width:0ch; }
+        58%    { width:0ch; }
+
+        58.99% { width:0ch; } 59%    { width:calc(1ch  + var(--pad)); }
+        59.79% { width:calc(1ch  + var(--pad)); } 59.8%  { width:calc(2ch  + var(--pad)); }
+        60.69% { width:calc(2ch  + var(--pad)); } 60.7%  { width:calc(3ch  + var(--pad)); }
+        61.59% { width:calc(3ch  + var(--pad)); } 61.6%  { width:calc(4ch  + var(--pad)); }
+        62.39% { width:calc(4ch  + var(--pad)); } 62.4%  { width:calc(5ch  + var(--pad)); }
+
+        64.19% { width:calc(5ch  + var(--pad)); } 64.2%  { width:calc(6ch  + var(--pad)); }
+        64.99% { width:calc(6ch  + var(--pad)); } 65%    { width:calc(7ch  + var(--pad)); }
+        65.69% { width:calc(7ch  + var(--pad)); } 65.7%  { width:calc(8ch  + var(--pad)); }
+        67.19% { width:calc(8ch  + var(--pad)); } 67.2%  { width:calc(9ch  + var(--pad)); }
+        67.99% { width:calc(9ch  + var(--pad)); } 68%    { width:calc(10ch + var(--pad)); }
+        68.79% { width:calc(10ch + var(--pad)); } 68.8%  { width:calc(11ch + var(--pad)); }
+        69.99% { width:calc(11ch + var(--pad)); } 70%    { width:calc(12ch + var(--pad)); }
+        70.99% { width:calc(12ch + var(--pad)); } 71%    { width:calc(13ch + var(--pad)); }
+        72.79% { width:calc(13ch + var(--pad)); } 72.8%  { width:calc(14ch + var(--pad)); }
+        73.59% { width:calc(14ch + var(--pad)); } 73.6%  { width:calc(15ch + var(--pad)); }
+        74.39% { width:calc(15ch + var(--pad)); } 74.4%  { width:calc(16ch + var(--pad)); }
+        75.19% { width:calc(16ch + var(--pad)); } 75.2%  { width:calc(17ch + var(--pad)); }
+        76.39% { width:calc(17ch + var(--pad)); } 76.4%  { width:calc(18ch + var(--pad)); }
+        77.99% { width:calc(18ch + var(--pad)); } 78%    { width:calc(19ch + var(--pad)); }
+
+        90%    { width:calc(19ch + var(--pad)); }
+
+        90.59% { width:calc(19ch + var(--pad)); } 90.6% { width:calc(15ch + var(--pad)); }
+        91.09% { width:calc(15ch + var(--pad)); } 91.1% { width:calc(11ch + var(--pad)); }
+        91.59% { width:calc(11ch + var(--pad)); } 91.6% { width:calc(7ch  + var(--pad)); }
+        91.99% { width:calc(7ch  + var(--pad)); } 92%   { width:calc(4ch  + var(--pad)); }
+        92.39% { width:calc(4ch  + var(--pad)); } 92.4% { width:calc(2ch  + var(--pad)); }
+        92.69% { width:calc(2ch  + var(--pad)); } 92.7% { width:0ch; }
+
+        100%   { width:0ch; }
+      }
+
+      @keyframes caretX {
+        0%    { transform:translateX(0ch); }
+        0.79% { transform:translateX(0ch); } 0.8%  { transform:translateX(1ch); }
+        1.95% { transform:translateX(1ch); } 1.96% { transform:translateX(2ch); }
+        3.35% { transform:translateX(2ch); } 3.36% { transform:translateX(3ch); }
+        4.75% { transform:translateX(3ch); } 4.76% { transform:translateX(4ch); }
+        6.25% { transform:translateX(4ch); } 6.26% { transform:translateX(5ch); }
+        7.45% { transform:translateX(5ch); } 7.46% { transform:translateX(6ch); }
+        13.75%{ transform:translateX(6ch); } 13.76%{ transform:translateX(5ch); }
+        13.9% { transform:translateX(5ch); } 13.91%{ transform:translateX(4ch); }
+        14.05%{ transform:translateX(4ch); } 14.06%{ transform:translateX(3ch); }
+        14.2% { transform:translateX(3ch); } 14.21%{ transform:translateX(2ch); }
+        14.3% { transform:translateX(2ch); } 14.31%{ transform:translateX(1ch); }
+        14.38%{ transform:translateX(1ch); } 14.39%{ transform:translateX(0ch); }
+        20%   { transform:translateX(0ch); }
+
+        20.6% { transform:translateX(0ch); } 20.61%{ transform:translateX(1ch); }
+        22.0% { transform:translateX(1ch); } 22.01%{ transform:translateX(2ch); }
+        23.3% { transform:translateX(2ch); } 23.31%{ transform:translateX(3ch); }
+        24.8% { transform:translateX(3ch); } 24.81%{ transform:translateX(4ch); }
+        26.4% { transform:translateX(4ch); } 26.41%{ transform:translateX(5ch); }
+        32.75%{ transform:translateX(5ch); } 32.76%{ transform:translateX(4ch); }
+        32.9% { transform:translateX(4ch); } 32.91%{ transform:translateX(3ch); }
+        33.05%{ transform:translateX(3ch); } 33.06%{ transform:translateX(2ch); }
+        33.2% { transform:translateX(2ch); } 33.21%{ transform:translateX(1ch); }
+        33.32%{ transform:translateX(1ch); } 33.33%{ transform:translateX(0ch); }
+        39%   { transform:translateX(0ch); }
+
+        39.7% { transform:translateX(0ch); } 39.71%{ transform:translateX(1ch); }
+        41.1% { transform:translateX(1ch); } 41.11%{ transform:translateX(2ch); }
+        42.4% { transform:translateX(2ch); } 42.41%{ transform:translateX(3ch); }
+        43.9% { transform:translateX(3ch); } 43.91%{ transform:translateX(4ch); }
+        45.5% { transform:translateX(4ch); } 45.51%{ transform:translateX(5ch); }
+        51.74%{ transform:translateX(5ch); } 51.75%{ transform:translateX(4ch); }
+        51.88%{ transform:translateX(4ch); } 51.89%{ transform:translateX(3ch); }
+        52.02%{ transform:translateX(3ch); } 52.03%{ transform:translateX(2ch); }
+        52.16%{ transform:translateX(2ch); } 52.17%{ transform:translateX(1ch); }
+        52.28%{ transform:translateX(1ch); } 52.29%{ transform:translateX(0ch); }
+        58%   { transform:translateX(0ch); }
+
+        58.99%{ transform:translateX(0ch); } 59%   { transform:translateX(1ch); }
+        59.79%{ transform:translateX(1ch); } 59.8% { transform:translateX(2ch); }
+        60.69%{ transform:translateX(2ch); } 60.7% { transform:translateX(3ch); }
+        61.59%{ transform:translateX(3ch); } 61.6% { transform:translateX(4ch); }
+        62.39%{ transform:translateX(4ch); } 62.4% { transform:translateX(5ch); }
+        64.19%{ transform:translateX(5ch); } 64.2% { transform:translateX(6ch); }
+        64.99%{ transform:translateX(6ch); } 65%   { transform:translateX(7ch); }
+        65.69%{ transform:translateX(7ch); } 65.7% { transform:translateX(8ch); }
+        67.19%{ transform:translateX(8ch); } 67.2% { transform:translateX(9ch); }
+        67.99%{ transform:translateX(9ch); } 68%   { transform:translateX(10ch); }
+        68.79%{ transform:translateX(10ch);} 68.8% { transform:translateX(11ch); }
+        69.99%{ transform:translateX(11ch);} 70%   { transform:translateX(12ch); }
+        70.99%{ transform:translateX(12ch);} 71%   { transform:translateX(13ch); }
+        72.79%{ transform:translateX(13ch);} 72.8% { transform:translateX(14ch); }
+        73.59%{ transform:translateX(14ch);} 73.6% { transform:translateX(15ch); }
+        74.39%{ transform:translateX(15ch);} 74.4% { transform:translateX(16ch); }
+        75.19%{ transform:translateX(16ch);} 75.2% { transform:translateX(17ch); }
+        76.39%{ transform:translateX(17ch);} 76.4% { transform:translateX(18ch); }
+        77.99%{ transform:translateX(18ch);} 78%   { transform:translateX(19ch); }
+        90%   { transform:translateX(19ch); }
+
+        90.59%{ transform:translateX(19ch);} 90.6% { transform:translateX(15ch); }
+        91.09%{ transform:translateX(15ch);} 91.1% { transform:translateX(11ch); }
+        91.59%{ transform:translateX(11ch);} 91.6% { transform:translateX(7ch); }
+        91.99%{ transform:translateX(7ch); } 92%   { transform:translateX(4ch); }
+        92.39%{ transform:translateX(4ch); } 92.4% { transform:translateX(2ch); }
+        92.69%{ transform:translateX(2ch); } 92.7% { transform:translateX(0ch); }
+        100%  { transform:translateX(0ch); }
+      }
+    ]]></style>
+  </defs>
+
+  <g clip-path="url(#clipOuter)" filter="url(#shadow)">
+    <rect width="900" height="260" rx="30" fill="url(#base)"/>
+    <rect width="900" height="260" rx="30" fill="url(#blobA)"/>
+    <rect width="900" height="260" rx="30" fill="url(#blobB)"/>
+
+    <rect x="40" y="58" width="820" height="150" rx="24"
+          fill="url(#terminal)" stroke="url(#terminalStroke)"/>
+
+    <path d="M60 86H840" stroke="#FFFFFF" stroke-opacity="0.70"/>
+    <path d="M60 190H840" stroke="#0B1220" stroke-opacity="0.10"/>
+
+    <text x="78" y="150"
+          font-size="58" font-weight="800"
+          fill="#2A8BFF" opacity="0.72"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">❯</text>
+
+    <!-- caret under the text -->
+    <rect id="caret" x="118" y="96" width="4" height="66" rx="1"
+          fill="#0B1220" opacity="0.84"/>
+
+    <!-- typed text -->
+    <g mask="url(#revealMask)"
+       font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+       font-size="58" font-weight="700" fill="#0B1220" text-rendering="geometricPrecision">
+      <text class="think" x="118" y="150" opacity="0">Think.</text>
+      <text class="code"  x="118" y="150" opacity="0">Code.</text>
+      <text class="push"  x="118" y="150" opacity="0">Push.</text>
+      <text class="stick" x="118" y="150" opacity="0">Stick to your plan.</text>
+    </g>
+  </g>
+
+  <rect x="0.5" y="0.5" width="899" height="259" rx="30" fill="none" stroke="url(#stroke)"/>
+</svg>
