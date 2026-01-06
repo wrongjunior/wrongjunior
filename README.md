@@ -1,64 +1,67 @@
+<div align="center">
+
 ![output](https://github.com/user-attachments/assets/5baee52c-e8f0-4291-ac0d-0f98e7070d46)
 
-### 🌿 About me:
 
-- ⏳ Go developer
-- 🗿 Think tanker, Gen 5
+<img alt="" src="./assets/glass/divider.svg" width="720">
 
 
+<img alt="about" src="./assets/glass/pill-about.svg" width="720">
+<br/><br/>
 
-### Tech Stack:
+<img alt="about-card" src="./assets/glass/cards/about-card.svg" width="720">
 
-![Go Badge](https://img.shields.io/badge/-Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Docker Badge](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Linux Badge](https://img.shields.io/badge/-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![PostgreSQL Badge](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+<br/><br/>
+<img alt="" src="./assets/glass/divider.svg" width="720">
 
-### Also know
+<img alt="stack" src="./assets/glass/pill-stack.svg" width="720">
+<br/><br/>
 
-![Prometheus Badge](https://img.shields.io/badge/-Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
-![Clickhouse Badge](https://img.shields.io/badge/-Clickhouse-141413?style=for-the-badge&logo=clickhouse&logoColor=F8F877)
-![SQLite Badge](https://img.shields.io/badge/-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![C Badge](https://img.shields.io/badge/-C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
-![C++ Badge](https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Java Badge](https://img.shields.io/badge/-Java-007396?style=for-the-badge&logo=java&logoColor=white)
-![Python Badge](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![MPI Badge](https://img.shields.io/badge/-MPI-FF9900?style=for-the-badge)
+<img alt="stack-card" src="./assets/glass/cards/stack-card.svg" width="720">
 
-### Contact:
+<img alt="" src="./assets/glass/divider.svg" width="720">
+<br/><br/>
 
-[![Telegram Badge](https://img.shields.io/badge/-Telegram-0088cc?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/uuidf)
+<img alt="contact" src="./assets/glass/pill-contact.svg" width="720">
+<br/><br/>
 
+<a href="https://t.me/uuidf">
+  <img alt="telegram" src="./assets/glass/telegram-glass.svg" height="52">
+</a>
 
-## 📌 Pinned Projects
+<br/><br/>
+<img alt="" src="./assets/glass/divider.svg" width="720">
 
-<div align="center">
-    <a href="https://github.com/wrongjunior/practical-networking">
-        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=practical-networking&border_color=EE4779&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=00BAE9" />
-    </a>
-    <span>&nbsp;</span>
-    <a href="https://github.com/wrongjunior/gh-checker">
-        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=gh-checker&border_color=00BAE9&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=EE4779" />
-    </a>
+<img alt="pinned" src="./assets/glass/pill-pinned.svg" width="720">
+<br/><br/>
+
+<p align="center">
+  <a href="https://github.com/wrongjunior/practical-networking">
+    <img src="./assets/glass/projects/practical-networking.svg" width="49%" alt="practical-networking" />
+  </a>
+  <a href="https://github.com/wrongjunior/gh-checker">
+    <img src="./assets/glass/projects/gh-checker.svg" width="49%" alt="gh-checker" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/wrongjunior/LitTime">
+    <img src="./assets/glass/projects/LitTime.svg" width="49%" alt="LitTime" />
+  </a>
+  <a href="https://github.com/wrongjunior/dirTree">
+    <img src="./assets/glass/projects/dirTree.svg" width="49%" alt="dirTree" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/wrongjunior/ltm-api">
+    <img src="./assets/glass/projects/ltm-api.svg" width="49%" alt="ltm-api" />
+  </a>
+  <a href="https://github.com/wrongjunior/ltm-front">
+    <img src="./assets/glass/projects/ltm-front.svg" width="49%" alt="ltm-front" />
+  </a>
+</p>
+
+<br/>
+
 </div>
-<p> </p>
-<div align="center">
-    <a href="https://github.com/wrongjunior/LitTime">
-        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=LitTime&border_color=00BAE9&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=EE4779" />
-    </a>
-    <span>&nbsp;</span>
-    <a href="https://github.com/wrongjunior/dirTree">
-        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=dirTree&border_color=EE4779&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=00BAE9" />
-    </a>
-</div>
-<p> </p>
-<div align="center">
-    <a href="https://github.com/wrongjunior/ltm-api">
-        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=ltm-api&border_color=EE4779&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=00BAE9" />
-    </a>
-    <span>&nbsp;</span>
-    <a href="https://github.com/wrongjunior/ltm-front">
-        <img width='49%' align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=wrongjunior&repo=ltm-front&border_color=00BAE9&bg_color=0D1117&title_color=C9D1D9&text_color=8B949E&icon_color=EE4779" />
-    </a>
-</div>
-
