@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="92" viewBox="0 0 900 92">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0B1220" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <radialGradient id="blobA" cx="24%" cy="35%" r="80%">
+      <stop offset="0" stop-color="#9B7CFF" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#9B7CFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="blobB" cx="86%" cy="75%" r="85%">
+      <stop offset="0" stop-color="#7CF7FF" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#7CF7FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9B7CFF"/>
+      <stop offset="1" stop-color="#7CF7FF"/>
+    </linearGradient>
+
+    <clipPath id="clip">
+      <rect x="0" y="0" width="900" height="92" rx="38"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect x="0" y="0" width="900" height="92" rx="38" fill="url(#base)"/>
+    <rect x="0" y="0" width="900" height="92" rx="38" fill="url(#blobA)"/>
+    <rect x="0" y="0" width="900" height="92" rx="38" fill="url(#blobB)"/>
+
+    <path d="M28 22H872" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1"/>
+    <path d="M28 70H872" stroke="#0B1220" stroke-opacity="0.10" stroke-width="1"/>
+  </g>
+
+  <rect x="0.5" y="0.5" width="899" height="91" rx="38" fill="none" stroke="url(#stroke)"/>
+
+  <!-- icon -->
+  <rect x="50" y="36" width="34" height="20" rx="10" fill="url(#accent)" opacity="0.95"/>
+  <circle cx="58" cy="46" r="4" fill="#FFFFFF" opacity="0.18"/>
+
+  <text x="96" y="58"
+        font-size="36"
+        font-weight="900"
+        fill="#0B1220"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial">
+    Pinned
+  </text>
+</svg>
