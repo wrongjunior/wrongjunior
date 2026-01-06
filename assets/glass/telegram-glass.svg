@@ -1,49 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="74" viewBox="0 0 260 74">
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="60" viewBox="0 0 232 60">
   <defs>
-    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.05"/>
     </linearGradient>
 
     <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.08"/>
     </linearGradient>
 
-    <radialGradient id="blobA" cx="30%" cy="30%" r="80%">
-      <stop offset="0" stop-color="#36D5FF" stop-opacity="0.32"/>
+    <radialGradient id="blobA" cx="30%" cy="30%" r="90%">
+      <stop offset="0" stop-color="#36D5FF" stop-opacity="0.22"/>
       <stop offset="1" stop-color="#36D5FF" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="blobB" cx="88%" cy="80%" r="80%">
-      <stop offset="0" stop-color="#2A8BFF" stop-opacity="0.26"/>
+    <radialGradient id="blobB" cx="88%" cy="80%" r="90%">
+      <stop offset="0" stop-color="#2A8BFF" stop-opacity="0.18"/>
       <stop offset="1" stop-color="#2A8BFF" stop-opacity="0"/>
     </radialGradient>
 
     <clipPath id="clip">
-      <rect x="0" y="0" width="260" height="74" rx="22"/>
+      <rect x="0" y="0" width="232" height="60" rx="18"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#clip)">
-    <rect x="0" y="0" width="260" height="74" rx="22" fill="url(#glass)"/>
-    <rect x="0" y="0" width="260" height="74" rx="22" fill="url(#blobA)"/>
-    <rect x="0" y="0" width="260" height="74" rx="22" fill="url(#blobB)"/>
-    <path d="M20 18H240" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1"/>
-    <path d="M20 56H240" stroke="#000000" stroke-opacity="0.28" stroke-width="1"/>
+    <rect x="0" y="0" width="232" height="60" rx="18" fill="url(#base)"/>
+    <rect x="0" y="0" width="232" height="60" rx="18" fill="url(#blobA)"/>
+    <rect x="0" y="0" width="232" height="60" rx="18" fill="url(#blobB)"/>
+    <path d="M18 16H214" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1"/>
+    <path d="M18 44H214" stroke="#000000" stroke-opacity="0.22" stroke-width="1"/>
   </g>
 
-  <rect x="0.5" y="0.5" width="259" height="73" rx="22" fill="none" stroke="url(#stroke)"/>
+  <rect x="0.5" y="0.5" width="231" height="59" rx="18" fill="none" stroke="url(#stroke)"/>
 
-  <!-- Telegram mark (simple) -->
-  <circle cx="44" cy="37" r="14" fill="#36D5FF" opacity="0.55"/>
-  <circle cx="44" cy="37" r="14" fill="#2A8BFF" opacity="0.35"/>
+  <!-- mark -->
+  <circle cx="36" cy="30" r="12" fill="#36D5FF" opacity="0.42"/>
+  <circle cx="36" cy="30" r="12" fill="#2A8BFF" opacity="0.28"/>
 
-  <path d="M37 37.2l16.8-6.5c.7-.3 1.2.3 1 .9l-3.2 17.1c-.2 1-.9 1.2-1.6.7l-4.9-3.6-2.6 2.4c-.3.3-.5.5-1 .5l.5-5.5 9.8-8.6c.4-.4-.1-.6-.6-.3l-12.2 7.1-5.2-1.7c-1.1-.4-1.1-1.1.2-1.5z"
-        fill="#0B0F16" opacity="0.86"/>
+  <path d="M30 30.1l14.2-5.4c.6-.2 1 .2.9.8l-2.7 14.5c-.2.8-.8 1-1.4.6l-4.1-3-2.2 2.1c-.3.3-.5.4-.9.4l.4-4.6 8.2-7.2c.4-.3-.1-.6-.6-.3l-10.3 6-4.4-1.4c-1-.3-1-.9.2-1.3z"
+        fill="#0B0F16" opacity="0.84"/>
 
-  <text x="70" y="44"
-        font-size="16"
+  <text x="60" y="36"
+        font-size="14"
         font-weight="900"
         letter-spacing="0.18em"
         fill="#EAF2FF"
